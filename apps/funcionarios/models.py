@@ -3,10 +3,11 @@ from apps.empresas.models import Empresa
 
 
 class Funcionario(models.Model):
+    username = models.CharField(max_length=30)
     primeiro_nome = models.CharField(max_length=20)
     ultimo_nome = models.CharField(max_length=20)
     email = models.EmailField(null=True, blank=True)
-    telefone = models.CharField(null=True, max_length=12)
+    telefone = models.CharField(null=True, blank=True, max_length=12)
     empresas = models.ManyToManyField(Empresa)
     criado_em = models.DateTimeField(auto_now_add=True, auto_now=False)
 

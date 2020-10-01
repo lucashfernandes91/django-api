@@ -1,19 +1,17 @@
 from pathlib import Path
+import django_heroku
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(w#=j3%ky27z3w1o!otqduf!wf(3z@@7)$cxq&y(!@#$#42'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+SECRET_KEY = 'OIJASD09sdOASDHsd8912u3-9u'
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -115,6 +113,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-"""STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]"""
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())

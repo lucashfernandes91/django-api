@@ -1,9 +1,8 @@
 from django.db import models
-#from apps.funcionarios.models import Funcionario
 
 
 class Empresa(models.Model):
-    nome = models.CharField(max_length=30, )
+    nome = models.CharField(max_length=30)
     criado_em = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     class Meta:
