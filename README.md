@@ -1,5 +1,7 @@
 # django-api
-Aplicação simples utilizando Django + Django Rest Framework
+Aplicação simples utilizando Django + Django Rest Framework que permite cadastrar empresas e funcionári@s e informar a qual empresa os funcinári@s pertencem. 
+1. Cadastrar, Consultar, Deletar e Editar funcionári@s.
+2. Listar e Cadastrar Empresas.
 
 A demonstração da aplicação está acessível através dos links: 
 https://entrevista-teste.herokuapp.com/funcionarios/
